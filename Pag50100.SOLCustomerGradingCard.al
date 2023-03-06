@@ -1,21 +1,32 @@
 page 50100 SOLCustomerGradingCard
 {
+    PageType = Card;
     ApplicationArea = All;
     Caption = 'SOLCustomerGradingCard';
-    PageType = Card;
-    SourceTable = "SOL Customer Grade";
+    SourceTable = "SOLCustomerGradeSetupTable";
+    InsertAllowed = false;
+    DeleteAllowed = false;
+
 
     layout
     {
         area(content)
         {
-            group(General)
+            group(Numbering)
             {
-                field("No."; Rec."No.")
+                Caption = 'Numbering';
+                field("No."; Rec."Grade No.")
                 {
-                    ToolTip = 'Specifies the value of the No. field.';
+                    ApplicationArea = All;
+                    ToolTip = 'Grade No.';
+
                 }
             }
         }
     }
+    trigger OnOpenPage()
+    begin
+        If not rec.Get() then
+            rec.Insert();
+    end;
 }

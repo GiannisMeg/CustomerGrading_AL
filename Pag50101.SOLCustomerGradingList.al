@@ -5,6 +5,8 @@ page 50101 SOLCustomerGradingList
     PageType = List;
     SourceTable = "SOL Customer Grade";
     UsageCategory = None;
+    Editable = false;
+    CardPageId = "AAD Application Card";
 
     layout
     {
@@ -14,8 +16,25 @@ page 50101 SOLCustomerGradingList
             {
                 field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
                     ToolTip = 'Specifies the value of the No. field.';
                 }
+                field("Description"; Rec.Description)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Specifies the value of the No. field.';
+                }
+            }
+        }
+        area(FactBoxes)
+        {
+            systempart(RecordLinks; Links)
+            {
+                ApplicationArea = All;
+            }
+            systempart(Notes; Notes)
+            {
+                ApplicationArea = All;
             }
         }
     }
