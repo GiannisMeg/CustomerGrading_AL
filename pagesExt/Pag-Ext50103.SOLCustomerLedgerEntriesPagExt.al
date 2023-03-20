@@ -17,7 +17,11 @@ pageextension 50103 SOLCustomerLedgerEntriesPagExt extends "Customer Ledger Entr
         }
         addfirst(factboxes)
         {
-
+            part(GradeHistory; "History Factbox")
+            {
+                ApplicationArea = all;
+                SubPageLink = "Customer No." = field("Customer No.");
+            }
         }
     }
 }

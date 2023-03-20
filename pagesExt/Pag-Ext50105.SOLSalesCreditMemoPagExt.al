@@ -17,7 +17,11 @@ pageextension 50105 SOLSalesCreditMemoPagExt extends "Sales Credit Memo"
         }
         addfirst(factboxes)
         {
-
+            part(GradeHistory; "History Factbox")
+            {
+                Caption = 'GradeHistory';
+                SubPageLink = "Customer No." = field("Bill-to Customer No.");
+            }
         }
     }
 }

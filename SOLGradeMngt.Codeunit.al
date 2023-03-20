@@ -67,7 +67,7 @@ codeunit 50100 "SOLGradeMngt"
     end;
 
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnAfterPostSalesDoc', '', false, false)]
-    local procedure AssignSalesToHeader(CommitIsSuppressed: Boolean; InvtPickPutaway: Boolean; RetRcpHdrNo: Code[20]; SalesCrMemoHdrNo: Code[20]; SalesInvHdrNo: Code[20]; SalesShptHdrNo: Code[20];
+    local procedure AssignGradeDuringSalesPost(CommitIsSuppressed: Boolean; InvtPickPutaway: Boolean; RetRcpHdrNo: Code[20]; SalesCrMemoHdrNo: Code[20]; SalesInvHdrNo: Code[20]; SalesShptHdrNo: Code[20];
          var CustLedgerEntry: Record "Cust. ledger Entry";
          var GenJnlPostLine: Codeunit "Gen. Jnl.-Post Line";
          var SalesHeader: Record "Sales Header"; Whsereceiv: Boolean; WhseShip: Boolean)

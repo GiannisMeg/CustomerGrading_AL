@@ -17,7 +17,13 @@ pageextension 50101 SOLCustomerListPagExt extends "Customer List"
             }
         }
         addfirst(factboxes)
-        { }
+        {
+            part(GradeHistory; "History Factbox")
+            {
+                ApplicationArea = all;
+                SubPageLink = "Customer No." = field("No.");
+            }
+        }
     }
 
 }

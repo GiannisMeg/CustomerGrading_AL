@@ -17,7 +17,11 @@ pageextension 50102 SOLSalesOrderPagExt extends "Sales Order"
         }
         addfirst(factboxes)
         {
-
+            part(GradeHistory; "History Factbox")
+            {
+                ApplicationArea = all;
+                SubPageLink = "Customer No." = field("Bill-to Customer No.");
+            }
         }
     }
 }
