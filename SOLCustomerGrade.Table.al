@@ -1,7 +1,7 @@
 table 50100 "SOL Customer Grade"
 {
     Caption = 'SOL Customer Grade';
-    DataClassification = ToBeClassified;
+    DataClassification = CustomerContent;
     LookupPageId = "SOLCustomerGradingList";
     DrillDownPageId = "SOLCustomerGradingList";
 
@@ -105,5 +105,6 @@ table 50100 "SOL Customer Grade"
             exit(true);
         end;
     end;
+
 
 }
